@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+
+<body>
+    <h1>Student</h1>
+    <form action="/students/<%=student._id%>/teachers" method="POST">
+        <label for="teacher">Select Teacher</label>
+        <select name="teacher" id="teacher">
+            <% for(let teacher of teachers){ %>
+            <option value="<%=teacher.id%>"><%=teacher.name%> </option> 
+            <% } %>
+        </select>
+        <button>Add</button>
+    </form>
+    <div><%=student.name%> - <%=student.age%></div>
+
+    <h2>Teachers</h2>
+    <ul>
+        <% for(let teacher of student.teachers) {%>
+        <li><a href="/teachers/<%=teacher._id%>"><%=teacher.name%></a> Age:<%=teacher.age%></li>
+        <% } %>
+    </ul>
+
+
+
+
+
+    <a href="/students">All Students</a>
+
+</body>
+
+</html>
