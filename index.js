@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const Teacher = require('./models/teacher');
 const Student = require('./models/student');
 
-console.log("Hello");
 
 
 console.log("hello");
