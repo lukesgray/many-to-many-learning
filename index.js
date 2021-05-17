@@ -7,6 +7,12 @@ const mongoose = require('mongoose');
 const Teacher = require('./models/teacher');
 const Student = require('./models/student');
 
+
+
+
+console.log("hello");
+
+
 mongoose.connect('mongodb://localhost:27017/college', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!");
