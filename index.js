@@ -9,7 +9,6 @@ const Student = require('./models/student');
 
 
 
-console.log("hello");
 
 
 mongoose.connect('mongodb://localhost:27017/college', { useNewUrlParser: true, useUnifiedTopology: true })
